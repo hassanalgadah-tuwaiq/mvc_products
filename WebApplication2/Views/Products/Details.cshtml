@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+    var found = (bool) ViewData["found"];
+    var p = (Product) ViewData["Product"];
+}
+
+    <!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    @if (found)
+        {
+            <p>the id is @p.id , the name is @p.name , the price is @p.price</p>
+        }
+        else
+        {
+            <p>the item you're looking for dosen't exist</p>
+        }
+</div>
+</body>
+</html>

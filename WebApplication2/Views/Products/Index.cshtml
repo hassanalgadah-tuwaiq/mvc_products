@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+    var products = (List<Product>)ViewData["products"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <ul>
+    @foreach (var p in products)
+    {
+        <li>the id is @p.id , the name is @p.name , the price is @p.price</li>
+    }
+    </ul>
+</div>
+</body>
+</html>
