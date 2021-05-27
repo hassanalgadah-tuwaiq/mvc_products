@@ -8,23 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Hassan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\h--sa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hassan\\RiderProjects\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "C:\\Users\\h--sa\\Desktop\\mvc_products\\WebApplication2\\WebApplication2.csproj",
       "projectName": "WebApplication2",
-      "projectPath": "C:\\Users\\Hassan\\RiderProjects\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
-      "packagesPath": "C:\\Users\\Hassan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hassan\\RiderProjects\\WebApplication2\\WebApplication2\\obj\\",
+      "projectPath": "C:\\Users\\h--sa\\Desktop\\mvc_products\\WebApplication2\\WebApplication2.csproj",
+      "packagesPath": "C:\\Users\\h--sa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\h--sa\\Desktop\\mvc_products\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Hassan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\h--sa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\h--sa\\.dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication2.Models;
 
@@ -8,40 +9,51 @@ namespace WebApplication2.Controllers
     {
         List<Product> products = new List<Product>()
         {
-            new Product() {id = 1, name = "item 1 ", price = 99f},
-            new Product() {id = 2, name = "item 2", price = 29f},
-            new Product() {id = 3, name = "item 3", price = 3399f}
+            new Product()
+            {
+                id = 1, name = "Clarity & Connection", price = 99f,
+                img = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/5248/9781524860486.jpg"
+            },
+            new Product()
+            {
+                id = 2, name = "Inward", price = 29f,
+                img = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4494/9781449495756.jpg"
+            },
+            new Product()
+            {
+                id = 3, name = "Pillow Thoughts", price = 3399f,
+                img = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4494/9781449489755.jpg"
+            }
         };
+
         // GET
-        public IActionResult Index()
+        public IActionResult Index(int id,string color)
         {
             ViewData["products"] = products;
+            ViewData["color"] = color;
             return View();
         }
+
         public IActionResult Ramdom()
         {
             return View();
         }
+        public IActionResult Namecolor(string name)
+        {
+            ViewData["name"] = name;
+            Console.WriteLine(name);
+            return View();
+        }
+
         public IActionResult Details(int id)
         {
-            Product p;
-            if (id != 0)
+            ViewData["found"] = false;
+            Product p = products.Find(pro => pro.id == id);
+            if (p != null)
             {
-                ViewData["found"] = false;
-                foreach (var product in products)
-                {
-                    if (id == product.id)
-                    {
-                        ViewData["product"] = product;
-                        ViewData["found"] = true;
-                    }
-                }
-                return View();
+                ViewData["product"] = p;
+                ViewData["found"] = true;
             }
-            ViewData["found"] = true;
-
-            p = new Product() {id = 1, name = "item 1 ", price = 99f};
-            ViewData["product"] = p;
             return View();
         }
     }

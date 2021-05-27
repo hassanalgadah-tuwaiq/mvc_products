@@ -1,0 +1,26 @@
+﻿@using System.Drawing
+
+@{
+    var name = (string)ViewData["name"];
+    Random rnd = new Random();
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    <p>
+    @foreach (var charr in name)
+    {
+        Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+        <span style="color:rgb(@randomColor.R , @randomColor.G , @randomColor.B)">@charr</span>
+    }
+    </p>
+</div>
+</body>
+</html>
